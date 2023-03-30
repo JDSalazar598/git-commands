@@ -133,3 +133,8 @@ Una vez que hayas confirmado los cambios en el repositorio local, puedes subir l
    - git pull origin master
    - git merge --no-ff hotfix/nombre_del_error_critico
    - git checkout develop
+
+
+
+# Para mas informacion 
+https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow#:~:text=What%20is%20Gitflow%3F,lived%20branches%20and%20larger%20commits.
