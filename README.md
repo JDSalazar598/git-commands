@@ -81,7 +81,7 @@ Una vez que hayas confirmado los cambios en el repositorio local, puedes subir l
    - git checkout develop
    - git pull origin develop
    - git merge --no-ff feature/nombre_de_la_caracteristica
-   - 
+   
 # Ramas de bugfix
    - bugfix-*: Las ramas de bugfix se crean a partir de la rama master, y se utilizan para solucionar errores críticos en el código en producción. Cuando se completa      el trabajo en una rama de bugfix, se fusiona de vuelta en la rama master y en la rama develop.
    
