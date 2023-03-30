@@ -136,5 +136,5 @@ Una vez que hayas confirmado los cambios en el repositorio local, puedes subir l
 
 
 
-# Para mas informacion 
+# Documentacion completa
 https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow#:~:text=What%20is%20Gitflow%3F,lived%20branches%20and%20larger%20commits.
