@@ -59,7 +59,7 @@ Una vez que hayas confirmado los cambios en el repositorio local, puedes subir l
 
   - git push //Este comando subirá los cambios confirmados al repositorio remoto, lo que permitirá que otros usuarios accedan a los mismos.
   
-#######################################################################################################################################################################
+###################################################################################################################################################
 
 
 # GitFlow Workflow
