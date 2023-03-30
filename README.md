@@ -58,3 +58,76 @@ Puedes actualizar el repositorio con los cambios más recientes desde el reposit
 Una vez que hayas confirmado los cambios en el repositorio local, puedes subir los cambios al repositorio remoto utilizando el siguiente comando:
 
   - git push //Este comando subirá los cambios confirmados al repositorio remoto, lo que permitirá que otros usuarios accedan a los mismos.
+  
+#-----------------------------------------------------------------------------------------------------------------------------------------
+# GitFlow Workflow
+
+
+# Ramas principales
+   - master: La rama master representa el código en producción.
+   - develop: La rama develop es la rama base para todas las demás ramas, y representa el código en desarrollo.
+
+# Ramas de feature
+   - feature-*: Las ramas de feature se crean a partir de la rama develop, y se utilizan para desarrollar nuevas características o funcionalidades. Cuando se completa      el trabajo en una rama de feature, se fusiona de vuelta en la rama develop.
+
+# Para crear una nueva rama de feature:
+
+   - git checkout develop
+   - git pull origin develop
+   - git checkout -b feature/nombre_de_la_caracteristica
+
+# Cuando se completa el trabajo en la rama de feature:
+
+   - git checkout develop
+   - git pull origin develop
+   - git merge --no-ff feature/nombre_de_la_caracteristica
+   - 
+# Ramas de bugfix
+   - bugfix-*: Las ramas de bugfix se crean a partir de la rama master, y se utilizan para solucionar errores críticos en el código en producción. Cuando se completa      el trabajo en una rama de bugfix, se fusiona de vuelta en la rama master y en la rama develop.
+   
+# Para crear una nueva rama de bugfix:
+
+  - git checkout master
+  - git pull origin master
+  - git checkout -b bugfix/nombre_del_error
+   
+# Cuando se completa el trabajo en la rama de bugfix:
+
+  - git checkout master
+  - git pull origin master
+  - git merge --no-ff bugfix/nombre_del_error
+  - git checkout develop
+  - git merge --no-ff bugfix/nombre_del_error
+
+# Ramas de release
+  - release-*: Las ramas de release se crean a partir de la rama develop, y se utilizan para preparar el código para su lanzamiento en producción. En la rama de        release, se pueden realizar tareas como pruebas, corrección de errores y documentación. Cuando se completa el trabajo en una rama de release, se fusiona de vuelta en la rama master y en la rama develop.
+
+# Para crear una nueva rama de release:
+
+  - git checkout develop
+  - git pull origin develop
+  - git checkout -b release/nombre_de_la_version
+
+# Cuando se completa el trabajo en la rama de release:
+
+  - git checkout master
+  - git pull origin master
+  - git merge --no-ff release/nombre_de_la_version
+  - git checkout develop
+  - git merge --no-ff release/nombre_de_la_version
+  
+# Ramas de hotfix
+   - hotfix-*: Las ramas de hotfix se crean a partir de la rama master, y se utilizan para solucionar errores críticos en el código en producción. Cuando se completa el trabajo en una rama de hotfix, se fusiona de vuelta en la rama master y en la rama develop.
+
+# Para crear una nueva rama de hotfix:
+
+   - git checkout master
+   - git pull origin master
+   - git checkout -b hotfix/nombre_del_error_critico
+
+# Cuando se completa el trabajo en la rama de hotfix:
+
+   - git checkout master
+   - git pull origin master
+   - git merge --no-ff hotfix/nombre_del_error_critico
+   - git checkout develop
